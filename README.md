@@ -1,6 +1,7 @@
-# Tigerk — Saf Python ile Yapay Sinir Ağı
+# ERGİN TEKNİK ATÖLYE · Tigerk
+## Saf Python ile Yapay Sinir Ağı
 
-Tigerk, sinir ağlarının ileri besleme, sigmoid aktivasyonu, geri yayılım ve ortalama kare hata (MSE) gibi temel parçalarını harici ML kütüphanesi olmadan göstermek üzere hazırlanmış eğitim projesidir.
+Tigerk, Ergin Teknik Atölye içindeki eğitim amaçlı sinir ağı deneyidir. İleri besleme, sigmoid aktivasyonu, geri yayılım ve ortalama kare hata (MSE) gibi temel parçaları harici makine öğrenmesi kütüphanesi olmadan görünür kılar.
 
 ## Gereksinim
 
@@ -25,4 +26,6 @@ python -m unittest test_tigerk -v
 
 ## Sınırlar
 
-Bu, küçük ve açıklanabilir bir eğitim uygulamasıdır; üretim ML çerçevesi veya genel amaçlı dil modeli değildir. AND kapısına ait test, yalnızca bu küçük örneğin beklenen davranışını doğrular.
+Bu, küçük ve açıklanabilir bir eğitim uygulamasıdır; üretim makine öğrenmesi çerçevesi veya genel amaçlı dil modeli değildir. AND kapısına ait test, yalnızca bu küçük örneğin beklenen davranışını doğrular.
+
+**Atölye:** Ergin Teknik Atölye
