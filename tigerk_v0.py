@@ -49,6 +49,8 @@ class Ag:
                         yeni.append(n["y"])
                     aktivasyonlar.append(yeni)
 
+                # L = ½(y-hedef)² ⇒ delta = ∂L/∂z = (y-hedef) · y · (1-y)
+                # Gizli katman bu deltayı sonraki ağırlıklarla geri taşır.
                 deltalar = [None] * len(self.katmanlar)
                 deltalar[-1] = [
                     (n["y"] - h) * n["y"] * (1.0 - n["y"])
@@ -64,6 +66,7 @@ class Ag:
                         for i, n in enumerate(mevcut)
                     ]
 
+                # w ← w - oran·delta·girdi. oran adım boyudur, yönü türev belirler.
                 for li, katman in enumerate(self.katmanlar):
                     girisler = aktivasyonlar[li]
                     for n, delta in zip(katman, deltalar[li]):
@@ -83,3 +86,9 @@ if __name__ == "__main__":
     print("=== Tigerk | tek dosyalık AND örneği ===")
     for x, y in veri:
         print(f"{x} -> {ag.ileri(x)[0]:.4f} (hedef {int(y[0])})")
+    print()
+    print("Geri yayılım, çıkıştaki hatayı zincir kuralıyla her ağırlığa taşır.")
+    print("delta = (y - hedef) * y * (1 - y)")
+    print("w -= oran * delta * girdi    b -= oran * delta")
+    print("Öğrenme oranı yön seçmez; adımın boyunu değiştirir.")
+    print("Sayılarla anlatım ve hatalı türevi düzeltme: python main.py")

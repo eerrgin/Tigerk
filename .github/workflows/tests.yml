@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile Python modules
-        run: python -m py_compile ag.py aktivasyon.py egitim.py katman.py kayip.py main.py noron.py test_tigerk.py tigerk_kur.py tigerk_v0.py ve_kapisi.py xor_kapisi.py
+        run: python -m py_compile ag.py aktivasyon.py denetci.py egitim.py katman.py kayip.py main.py mantik.py noron.py test_tigerk.py tigerk_kur.py tigerk_v0.py ve_kapisi.py xor_kapisi.py
       - name: Run unit tests
         run: python -m unittest test_tigerk -v
       - name: Smoke-test modular demo
